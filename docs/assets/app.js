@@ -5,6 +5,7 @@
   const $ = id => document.getElementById(id);
   const C = {ink:'#e7eff2', muted:'#90a6b1', teal:'#45d6c0', coral:'#ed966a', gold:'#cfb57a', grid:'#233945', panel:'#0c1e2b'};
   const state = {model:'fs', age:'all', region:'all', vehicle:'all', cap:'200000', view:'surface', profileAge:40, bonus:50};
+  let renderedSurfaceView = null;
   const names = {fs:'Poisson × Gamma', tw:'Tweedie GLM', base:'Portfolio mean'};
   const whole = M.aggregate(rows);
   const nf = (v, d=0) => v == null || !Number.isFinite(v) ? '—' : v.toLocaleString('en-US',{minimumFractionDigits:d,maximumFractionDigits:d});
@@ -18,6 +19,11 @@
   $('profile-details').textContent=Object.entries(D.surface.profile).filter(([k])=>!['DrivAge','BonusMalus'].includes(k)).map(([k,v])=>k+': '+v).join(' · ')+'. Values selected from the training portfolio.';
 
   function renderSurface() {
+    // WebGL scenes and Cartesian axes cannot safely share Plotly's retained state.
+    if (renderedSurfaceView !== state.view) {
+      Plotly.purge($('surface-chart'));
+      renderedSurfaceView = state.view;
+    }
     const surface=D.surface, z=surface.values[state.model], a=surface.ages.indexOf(state.profileAge), b=surface.bonuses.indexOf(state.bonus);
     $('age-output').value=state.profileAge;$('bonus-output').value=state.bonus;
     $('profile-price').textContent=eur(z[a][b]);$('profile-model').textContent=names[state.model];
