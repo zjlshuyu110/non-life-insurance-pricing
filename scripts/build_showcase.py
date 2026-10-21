@@ -76,7 +76,10 @@ def build() -> None:
     (assets / "plotly.min.js").write_text(get_plotlyjs(), encoding="utf-8")
     for name in ["app.js", "engine.js", "style.css"]:
         shutil.copyfile(ROOT / "visualization" / name, assets / name)
-    shutil.copyfile(ROOT / "visualization/index.html", target / "index.html")
+    html = (ROOT / "visualization/index.html").read_text(encoding="utf-8")
+    for name in ["app.js", "engine.js", "style.css", "study-data.js", "plotly.min.js"]:
+        html = html.replace(f'assets/{name}"', f'assets/{name}?v={sha256(assets / name)[:12]}"')
+    (target / "index.html").write_text(html, encoding="utf-8", newline="\n")
     (target / ".nojekyll").write_text("")
     (ROOT / "reports/showcase_validation.json").write_text(json.dumps({
         "policies": int(cube.policies.sum()), "aggregate_cells": len(cube), "surface_profiles": len(grid),
