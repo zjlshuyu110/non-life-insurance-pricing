@@ -8,6 +8,12 @@
 
 ## 两条定价路线
 
+新增了 [GLM 与普通神经网络的在线实测对比](https://zjlshuyu110.github.io/non-life-insurance-pricing/model-comparison.html)。同一测试集上，Poisson × Gamma 的 deviance 为 33.850，参考 Tweedie GLM 为 33.878，普通 MLP 的三个种子为 33.967–34.100。这次神经网络没有胜出；主运行总赔款校准接近实际，但风险排序较弱。完整设计、区间与解读见 [对比报告](../reports/model_comparison/report.md)。
+
+MLP 是 75 → 64 → 32 → 1 的普通全连接网络，使用 ReLU、正值输出和 exposure 加权 Tweedie 损失。架构与第 7 轮训练预算由内部验证集选定，测试集不参与调参。另设一个验证集调参后的 GLM，使比较更完整；它在这个测试集上也没有超过原始基准，因此不能把“调参”自动等同于“效果更好”。
+
+在基础模型跑完后，执行 `python -m pip install -r requirements-neural.txt`，再执行 `python -m nonlife.compare_neural` 即可重跑。
+
 1. Poisson 模型预测出险频率，Gamma 模型预测案均赔款，两者相乘得到年化纯保费。
 2. Tweedie 模型直接预测年化纯保费。
 

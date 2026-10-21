@@ -1,0 +1,19 @@
+{
+  "validation_fraction_of_training": 0.2,
+  "validation_split_seed": 42,
+  "tweedie_power": 1.9,
+  "glm_alphas": [0.001, 0.01, 0.1, 1.0],
+  "mlp_candidates": [[32, 16], [64, 32]],
+  "selection_seed": 0,
+  "final_seeds": [0, 1, 2],
+  "max_epochs": 60,
+  "patience": 8,
+  "min_delta": 0.0001,
+  "batch_size": 8192,
+  "learning_rate": 0.001,
+  "weight_decay": 0.001,
+  "gradient_clip": 5.0,
+  "cpu_threads": 4,
+  "bootstrap_replicates": 1000,
+  "bootstrap_seed": 2026
+}

@@ -8,6 +8,32 @@
 
 [中文说明](docs/GUIDE_ZH.md) · [Methodology](docs/METHODOLOGY.md) · [Data card](data/README.md) · [Run results](reports/report.md)
 
+## GLM versus an ordinary neural network
+
+[**Open the measured GLM vs MLP comparison →**](https://zjlshuyu110.github.io/non-life-insurance-pricing/model-comparison.html)
+
+The full-data experiment compares the original GLMs, a validation-tuned Tweedie GLM, and a plain two-layer ReLU MLP trained with exposure-weighted Tweedie loss. It uses the same 169,504 test policies; architecture and stopping epoch are selected inside the training set, then three neural seeds are refitted and reported.
+
+| Test model | Tweedie deviance p=1.9 ↓ | Gini ↑ | Expected / observed |
+|---|---:|---:|---:|
+| Poisson × Gamma | 33.84999 | 0.3055 | 101.06% |
+| Reference Tweedie GLM | 33.87828 | 0.2883 | 101.97% |
+| Validation-tuned Tweedie GLM | 33.93753 | 0.2743 | 100.98% |
+| MLP, predeclared seed 0 | 34.01770 | 0.2647 | 100.20% |
+
+**The plain MLP did not beat the reference GLMs in this experiment.** Across three seeds, neural test deviance ranged from 33.96688 to 34.09955. Seed 0 matched total losses closely, but seed calibration varied; good total calibration does not imply good ranking. The primary paired bootstrap comparison against the validation-tuned GLM includes zero, so its small deviance difference is inconclusive under that analysis. These findings apply to this single split and limited search, not to all neural networks.
+
+See the [bilingual experiment report](reports/model_comparison/report.md), [validation search](reports/model_comparison/validation_search.csv), [learning curves](reports/model_comparison/learning_curves.csv), [paired uncertainty intervals](reports/model_comparison/paired_bootstrap.csv) and [recorded protocol](comparison_config.json).
+
+After reproducing the base study, run:
+
+```bash
+python -m pip install -r requirements-neural.txt
+python -m nonlife.compare_neural
+```
+
+The CPU run took about 104 seconds on the original machine. Raw predictions and model checkpoints stay local; only aggregate metrics, plots and training curves are published.
+
 ## Interactive visual lab
 
 - **3D model landscape** — rotate a WebGL surface, change driver age and bonus–malus, or switch to an accessible 2D view. Predictions use a clearly labelled illustrative fixed profile.

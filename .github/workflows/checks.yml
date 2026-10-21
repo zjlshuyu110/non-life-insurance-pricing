@@ -10,6 +10,7 @@ jobs:
           python-version: '3.12'
           cache: pip
       - run: python -m pip install -r requirements-lock.txt
+      - run: python -m pip install -r requirements-neural.txt
       - run: python -m pytest -q
       - uses: actions/setup-node@v4
         with:

@@ -1,0 +1,7 @@
+family,alpha,validation_deviance,architecture,widths,seed,best_epoch,best_validation_deviance,epochs_run,seconds,parameters
+TweedieGLM,0.001,34.383558196803946,,,,,,,,
+TweedieGLM,0.01,34.349939013220414,,,,,,,,
+TweedieGLM,0.1,34.23866824574585,,,,,,,,
+TweedieGLM,1.0,34.19389663237212,,,,,,,,
+MLP,,34.28411821289354,32-16,"[32, 16]",0.0,7.0,34.28411821289354,15.0,21.105,2977.0
+MLP,,34.276467527187386,64-32,"[64, 32]",0.0,7.0,34.276467527187386,15.0,18.315,6977.0

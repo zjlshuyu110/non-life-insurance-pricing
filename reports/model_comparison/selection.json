@@ -1,0 +1,10 @@
+{
+  "glm_alpha": 1.0,
+  "mlp_widths": [
+    64,
+    32
+  ],
+  "mlp_epochs": 7,
+  "primary_mlp_seed": 0,
+  "chosen_at_utc": "2026-10-21T21:27:07.346855+00:00"
+}

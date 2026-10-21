@@ -1,0 +1,19 @@
+{
+  "primary_comparison": "MLP seed 0 versus validation-tuned Tweedie GLM",
+  "primary_metric": "exposure-weighted Tweedie deviance, p=1.9",
+  "mlp_improvement_percent": -0.2362352262371633,
+  "difference": 0.080172404157139,
+  "conditional_ci95": [
+    -0.0482378709181226,
+    0.228856725066256
+  ],
+  "winner_by_point_estimate": "Tuned Tweedie GLM",
+  "mlp_seed_deviance_range": [
+    33.966883559084444,
+    34.099545561703955
+  ],
+  "mlp_seed_gini_range": [
+    0.2517865236069261,
+    0.2799522203902955
+  ]
+}

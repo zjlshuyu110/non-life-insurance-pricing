@@ -1,0 +1,132 @@
+{
+  "run_at_utc": "2026-10-21T21:28:03.259377+00:00",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scikit-learn": "1.7.2",
+    "torch": "2.9.1+cpu"
+  },
+  "experiment": {
+    "validation_fraction_of_training": 0.2,
+    "validation_split_seed": 42,
+    "tweedie_power": 1.9,
+    "glm_alphas": [
+      0.001,
+      0.01,
+      0.1,
+      1.0
+    ],
+    "mlp_candidates": [
+      [
+        32,
+        16
+      ],
+      [
+        64,
+        32
+      ]
+    ],
+    "selection_seed": 0,
+    "final_seeds": [
+      0,
+      1,
+      2
+    ],
+    "max_epochs": 60,
+    "patience": 8,
+    "min_delta": 0.0001,
+    "batch_size": 8192,
+    "learning_rate": 0.001,
+    "weight_decay": 0.001,
+    "gradient_clip": 5.0,
+    "cpu_threads": 4,
+    "bootstrap_replicates": 1000,
+    "bootstrap_seed": 2026
+  },
+  "target_config": {
+    "seed": 0,
+    "test_size": 0.25,
+    "claim_count_cap": 4,
+    "exposure_cap": 1.0,
+    "claim_amount_cap": 200000.0,
+    "frequency_alpha": 0.0001,
+    "severity_alpha": 10.0,
+    "tweedie_alpha": 0.1,
+    "tweedie_power": 1.9,
+    "evaluation_powers": [
+      1.5,
+      1.9
+    ],
+    "sensitivity_caps": [
+      50000.0,
+      null
+    ]
+  },
+  "selection": {
+    "glm_alpha": 1.0,
+    "mlp_widths": [
+      64,
+      32
+    ],
+    "mlp_epochs": 7,
+    "primary_mlp_seed": 0,
+    "chosen_at_utc": "2026-10-21T21:27:07.346855+00:00"
+  },
+  "train_policies": 508509,
+  "inner_fit_policies": 406807,
+  "validation_policies": 101702,
+  "test_policies": 169504,
+  "feature_count": 75,
+  "full_data_run": true,
+  "same_test_ids_and_targets_as_original": true,
+  "original_glm_predictions_reproduced": true,
+  "split_overlap": 0,
+  "preprocessing_fit_on": "inner fit during selection, full training during refit",
+  "post_hoc_calibration": false,
+  "test_used_for_selection": false,
+  "device": "CPU",
+  "glm_reference_and_tuned_refit_seconds": 6.921,
+  "final_mlp_runs": [
+    {
+      "widths": [
+        64,
+        32
+      ],
+      "seed": 0,
+      "best_epoch": 7,
+      "best_validation_deviance": null,
+      "epochs_run": 7,
+      "seconds": 10.738,
+      "parameters": 6977
+    },
+    {
+      "widths": [
+        64,
+        32
+      ],
+      "seed": 1,
+      "best_epoch": 7,
+      "best_validation_deviance": null,
+      "epochs_run": 7,
+      "seconds": 10.767,
+      "parameters": 6977
+    },
+    {
+      "widths": [
+        64,
+        32
+      ],
+      "seed": 2,
+      "best_epoch": 7,
+      "best_validation_deviance": null,
+      "epochs_run": 7,
+      "seconds": 11.929,
+      "parameters": 6977
+    }
+  ],
+  "source_manifest_sha256": "fb28ef04eac4ac9646531fc96da84185b115a3f0a970c6a776752d1e6f769e61",
+  "comparison_config_sha256": "4e56fceb4ed23191d97f0b6295f9105d9dbc3bfc60a2929aff227f51a59c52c7",
+  "bootstrap_scope": "paired IID policy resampling; fitted models fixed; excludes training uncertainty and entity clustering",
+  "elapsed_seconds": 103.76
+}

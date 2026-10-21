@@ -31,16 +31,21 @@ class PricingModels:
         }, index=frame.index)
 
 
-def fit_models(train: pd.DataFrame, config: dict) -> PricingModels:
-    transformer = ColumnTransformer([
+def make_transformer(seed: int = 0) -> ColumnTransformer:
+    """Shared feature definition; fit separately on each permitted training split."""
+    return ColumnTransformer([
         ("binned", KBinsDiscretizer(n_bins=10, strategy="quantile", encode="onehot",
-                                   quantile_method="averaged_inverted_cdf", random_state=config["seed"]),
+                                   quantile_method="averaged_inverted_cdf", random_state=seed),
          ["VehAge", "DrivAge"]),
         ("categorical", OneHotEncoder(handle_unknown="ignore"),
          ["VehBrand", "VehPower", "VehGas", "Region", "Area"]),
         ("bonus_malus", "passthrough", ["BonusMalus"]),
         ("density", make_pipeline(FunctionTransformer(np.log), StandardScaler()), ["Density"]),
     ])
+
+
+def fit_models(train: pd.DataFrame, config: dict) -> PricingModels:
+    transformer = make_transformer(config["seed"])
     # Do not include test policies when estimating bins, scales or category levels.
     x = transformer.fit_transform(train)
     positive = train.ClaimAmount.to_numpy() > 0

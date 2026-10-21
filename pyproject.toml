@@ -1,7 +1,7 @@
 [project]
 name = "non-life-insurance-pricing"
 version = "0.1.0"
-description = "Reproducible French motor insurance pricing: frequency-severity and Tweedie GLMs."
+description = "Reproducible French motor insurance pricing: GLMs versus an ordinary neural network."
 readme = "README.md"
 requires-python = ">=3.11"
 license = "BSD-3-Clause"

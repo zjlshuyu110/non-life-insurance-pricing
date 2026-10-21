@@ -1,0 +1,4 @@
+widths,seed,best_epoch,best_validation_deviance,epochs_run,seconds,parameters
+"[64, 32]",0,7,,7,10.738,6977
+"[64, 32]",1,7,,7,10.767,6977
+"[64, 32]",2,7,,7,11.929,6977

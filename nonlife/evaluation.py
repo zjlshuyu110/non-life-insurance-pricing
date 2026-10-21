@@ -19,9 +19,10 @@ def ordered_lorenz(loss: np.ndarray, exposure: np.ndarray, score: np.ndarray) ->
     return x, y, float(1.0 - 2.0 * np.trapezoid(y, x))
 
 
-def metrics(frame: pd.DataFrame, predictions: pd.DataFrame, split: str, powers: list[float]) -> pd.DataFrame:
+def metrics(frame: pd.DataFrame, predictions: pd.DataFrame, split: str, powers: list[float],
+            model_names: list[str] | None = None) -> pd.DataFrame:
     records = []
-    for name in MODELS:
+    for name in MODELS if model_names is None else model_names:
         pred = predictions[name].to_numpy()
         if not np.isfinite(pred).all() or (pred <= 0).any():
             raise ValueError(f"Invalid predictions from {name}")
