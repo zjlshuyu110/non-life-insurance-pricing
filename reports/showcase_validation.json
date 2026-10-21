@@ -1,0 +1,9 @@
+{
+  "policies": 169504,
+  "aggregate_cells": 6268,
+  "surface_profiles": 777,
+  "weighted_deviance_matches_saved_metrics": true,
+  "predicted_totals_match_saved_metrics": true,
+  "individual_policy_records_exported": false,
+  "source_manifest_sha256": "fb28ef04eac4ac9646531fc96da84185b115a3f0a970c6a776752d1e6f769e61"
+}

@@ -1,0 +1,46 @@
+{
+  "datasets": {
+    "freMTPL2freq": {
+      "openml_id": 41214,
+      "download_source": "casdatasets",
+      "source": "https://raw.githubusercontent.com/dutangc/CASdatasets/c49cbbb37235fc49616cac8ccac32e1491cdc619/data/freMTPL2freq.rda",
+      "git_commit": "c49cbbb37235fc49616cac8ccac32e1491cdc619",
+      "rda_sha256": "6be2ecdf87fba43a968adab6a1392f0ce9391a560cbb795036219c95d48da7df",
+      "source_package_license": "GPL (>= 2)",
+      "note": "Original authors' historical CASdatasets snapshot; downloaded because OpenML was unreachable. Not independently byte-matched to OpenML.",
+      "downloaded_at_utc": "2026-10-21T20:45:25.161862+00:00",
+      "rows": 678013,
+      "columns": [
+        "IDpol",
+        "ClaimNb",
+        "Exposure",
+        "Area",
+        "VehPower",
+        "VehAge",
+        "DrivAge",
+        "BonusMalus",
+        "VehBrand",
+        "VehGas",
+        "Density",
+        "Region"
+      ],
+      "sha256": "c177fc1c2c401441c85894832c1ae117171fbdf95278e040ca55feffad91ced1"
+    },
+    "freMTPL2sev": {
+      "openml_id": 41215,
+      "download_source": "casdatasets",
+      "source": "https://raw.githubusercontent.com/dutangc/CASdatasets/c49cbbb37235fc49616cac8ccac32e1491cdc619/data/freMTPL2sev.rda",
+      "git_commit": "c49cbbb37235fc49616cac8ccac32e1491cdc619",
+      "rda_sha256": "98276cab72280f3368eeef1f367e044147e559c96ec1cadb0c6bf006362121f1",
+      "source_package_license": "GPL (>= 2)",
+      "note": "Original authors' historical CASdatasets snapshot; downloaded because OpenML was unreachable. Not independently byte-matched to OpenML.",
+      "downloaded_at_utc": "2026-10-21T20:46:50.091125+00:00",
+      "rows": 26639,
+      "columns": [
+        "IDpol",
+        "ClaimAmount"
+      ],
+      "sha256": "4b3a4897f7139499f28cde28ef0dcaa7b91ac6e1271bb7d97be90996b6dff504"
+    }
+  }
+}

@@ -1,0 +1,70 @@
+{
+  "run_at_utc": "2026-10-21T20:50:08.569312+00:00",
+  "python": "3.12.14",
+  "packages": {
+    "numpy": "2.5.4",
+    "pandas": "2.3.3",
+    "scipy": "1.18.1",
+    "scikit-learn": "1.7.2",
+    "matplotlib": "3.11.2",
+    "plotly": "6.9.0"
+  },
+  "sample": null,
+  "full_data_run": true,
+  "config": {
+    "seed": 0,
+    "test_size": 0.25,
+    "claim_count_cap": 4,
+    "exposure_cap": 1.0,
+    "claim_amount_cap": 200000.0,
+    "frequency_alpha": 0.0001,
+    "severity_alpha": 10.0,
+    "tweedie_alpha": 0.1,
+    "tweedie_power": 1.9,
+    "evaluation_powers": [
+      1.5,
+      1.9
+    ],
+    "sensitivity_caps": [
+      50000.0,
+      null
+    ]
+  },
+  "merge_audit": {
+    "frequency_rows": 678013,
+    "severity_rows": 26639,
+    "joined_policies": 678013,
+    "orphan_severity_rows": 195,
+    "orphan_claim_amount": 788714.1800000002,
+    "raw_total_claim_amount": 59909216.5,
+    "raw_exposure_years": 358499.4454629838
+  },
+  "cleaning_audit": {
+    "count_capped_policies": 9,
+    "exposure_capped_policies": 1224,
+    "amount_capped_policies": 20,
+    "zero_amount_count_corrections": 9116,
+    "claim_amount_cap": 200000.0,
+    "claim_amount_removed": 7737579.419999994,
+    "modelled_total_claim_amount": 52171637.080000006,
+    "modelled_exposure_years": 358360.1054629838,
+    "positive_loss_policies": 24944,
+    "policy_count": 678013
+  },
+  "train_policies": 508509,
+  "test_policies": 169504,
+  "test_positive_loss_policies": 6237,
+  "preprocessing_fit_on": "training policies only",
+  "split_overlap": 0,
+  "source_manifest_sha256": "fb28ef04eac4ac9646531fc96da84185b115a3f0a970c6a776752d1e6f769e61",
+  "iterations": {
+    "poisson": 5,
+    "gamma": 3,
+    "tweedie": 4
+  },
+  "elapsed_seconds": 21.07,
+  "data_sources": {
+    "freMTPL2freq": "https://raw.githubusercontent.com/dutangc/CASdatasets/c49cbbb37235fc49616cac8ccac32e1491cdc619/data/freMTPL2freq.rda",
+    "freMTPL2sev": "https://raw.githubusercontent.com/dutangc/CASdatasets/c49cbbb37235fc49616cac8ccac32e1491cdc619/data/freMTPL2sev.rda"
+  }
+}

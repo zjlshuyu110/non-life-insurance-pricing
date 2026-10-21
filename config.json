@@ -1,0 +1,13 @@
+{
+  "seed": 0,
+  "test_size": 0.25,
+  "claim_count_cap": 4,
+  "exposure_cap": 1.0,
+  "claim_amount_cap": 200000.0,
+  "frequency_alpha": 0.0001,
+  "severity_alpha": 10.0,
+  "tweedie_alpha": 0.1,
+  "tweedie_power": 1.9,
+  "evaluation_powers": [1.5, 1.9],
+  "sensitivity_caps": [50000.0, null]
+}
