@@ -4,3 +4,6 @@ data/text_demo/public/*.txt text eol=lf
 data/text_demo/public/*.pdf binary
 nonlife/text_pricing.py text eol=lf
 text_config.json text eol=lf
+reports/text_pricing/* text eol=lf
+docs/assets/text-pricing* text eol=lf
+docs/text-to-pricing.html text eol=lf

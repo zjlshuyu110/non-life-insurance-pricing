@@ -17,7 +17,7 @@ The local pretrained MiniLM reader selects answer spans; typed schema checks val
 | Absent or unsupported fields left empty | 10 / 10 |
 | Raw public-PDF question exact matches | 3 / 6 |
 | Maximum relative pricing difference vs gold inputs, priced cases only | 0.0% |
-| CPU inference + handoff, excluding model loading | 1.94 s |
+| CPU inference + handoff, excluding model loading | 2.20 s |
 
 The nine scored applications are short, authored development fixtures, inspected during implementation. Three document-gate scenarios are excluded from field accuracy. These numbers are **not** an independent extraction accuracy estimate. The model and question wording were not fine-tuned; a usage-enum check was added after inspecting a development error. There is no test of real pricing uplift.
 

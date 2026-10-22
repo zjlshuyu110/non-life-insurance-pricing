@@ -21,7 +21,7 @@ def build():
             raise ValueError("Recorded run is stale: " + path)
     assets = ROOT / "docs/assets"
     assets.mkdir(exist_ok=True)
-    (assets / "text-pricing-data.js").write_text("window.TEXT_PRICING_DATA=" + json.dumps(r, ensure_ascii=False, separators=(",", ":"), allow_nan=False) + ";\n", encoding="utf-8")
+    (assets / "text-pricing-data.js").write_text("window.TEXT_PRICING_DATA=" + json.dumps(r, ensure_ascii=False, separators=(",", ":"), allow_nan=False) + ";\n", encoding="utf-8", newline="\n")
     for file in ["text-pricing.css", "text-pricing.js"]:
         shutil.copyfile(ROOT / "visualization" / file, assets / file)
     html = (ROOT / "visualization/text-to-pricing.html").read_text(encoding="utf-8")
@@ -64,7 +64,7 @@ def build():
               "Public documents: Nikolai Sachok, Strata Insurance Corpus, CC BY 4.0. Two original PDFs are unchanged; pypdf 6.1.3 extracts their text. Local model: deepset/minilm-uncased-squad2, CC BY 4.0, pinned revision 934656cdda79824eabf503ed56e15c01ddbdbe3f. See THIRD_PARTY_NOTICES.md for attribution.", "",
               "## 展示时的说法", "",
               "我把 AI 接在信息提取环节，实际运行了开源语言模型，保留每个字段的原文证据，并用校验与人工复核入口控制错误。通过的字段进入已经训练好的 GLM。公开保险文档可用于抽取演示，但还没有核实到合适的真实投保文本与后续赔款配对数据，所以这个版本证明流程可运行，不声称定价精度提高。", ""]
-    (report / "report.md").write_text("\n".join(lines), encoding="utf-8")
+    (report / "report.md").write_text("\n".join(lines), encoding="utf-8", newline="\n")
     print("Built docs/text-to-pricing.html and measured text-pricing report.")
 
 

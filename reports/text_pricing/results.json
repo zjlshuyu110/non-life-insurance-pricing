@@ -20,7 +20,7 @@
     "model_sha256": "3b4540913154f8ecbd486eacfa5fd2ad36999025e1372b876341753c73f72019",
     "fixtures_sha256": "d521774b057d2daa4ac66bcfa194b65b691ee06b14765bbc2b8a6d553b07a3ad",
     "config_sha256": "538db4e61740d626b9d27f2c104485e5c7106519df4eec7db32ff912e059c659",
-    "extractor_code_sha256": "94773a99b85c88f5af1fffa1b766289bde07284261a188e4e21e77dc3946dd70",
+    "extractor_code_sha256": "19bb6692ca68ba8252ff2cecf9f3ccfc4c9b8f78a103ded962cc050d50c6c94f",
     "versions": {
       "torch": "2.9.1+cpu",
       "transformers": "4.57.6",
@@ -30,7 +30,7 @@
       "scikit-learn": "1.7.2"
     },
     "manifest_sha256": "1bb2848b4bf2d78b2724a0074bc862ce26e40ba824ce4765ad6410ff57be82a6",
-    "runtime_seconds": 1.93636749999132,
+    "runtime_seconds": 2.2008523999829777,
     "pricing_retrained": false,
     "claims_predictive_uplift_tested": false,
     "evaluation": "Small authored development fixtures, inspected during implementation; not an independent NLP test set."

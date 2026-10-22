@@ -218,7 +218,7 @@ def benchmark(root: Path = ROOT) -> dict:
     }
     out = root / "reports/text_pricing"
     out.mkdir(parents=True, exist_ok=True)
-    (out / "results.json").write_text(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8")
+    (out / "results.json").write_text(json.dumps(report, ensure_ascii=False, indent=2, allow_nan=False) + "\n", encoding="utf-8", newline="\n")
     print(json.dumps(report["metrics"], indent=2))
     return report
 
@@ -239,7 +239,7 @@ def main():
                                       joblib.load(ROOT / "artifacts/models/full.joblib"), config)
         serialized = json.dumps(result, ensure_ascii=False, indent=2)
         if args.output:
-            args.output.write_text(serialized + "\n", encoding="utf-8")
+            args.output.write_text(serialized + "\n", encoding="utf-8", newline="\n")
         print(serialized)
     else:
         benchmark()
