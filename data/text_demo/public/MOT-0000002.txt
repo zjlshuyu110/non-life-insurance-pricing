@@ -1,0 +1,24 @@
+SYNTHETIC — MERIDIAN MUTUAL (FICTIONAL)
+Meridian Mutual Insurance SE
+Motor Policy — Declarations
+Policy Declarations
+Policy number MOT-0000002
+Line of business Motor
+Named insured Dott. Alfio Leone
+Mailing address Stretto Gaetano, 53, 07049 Tresilico, Italy
+Policy period 26/11/2023 to 25/11/2024
+Insured vehicle Peugeot 208 (2016, black) — reg HX-9830-IX
+Producing agent Alexandre Traore — Paris Assurances
+Annual premium €2,075.00
+Deductible €1,000.00
+Limits of Insurance
+Coverage Limit
+Bodily injury — per person €100,000.00
+Bodily injury — per accident €300,000.00
+Property damage €100,000.00
+Endorsements
+NEW_CAR_REPL
+The full policy contract, endorsement schedule, and coverage schedule are issued as separate forms
+under policy MOT-0000002.
+This document is synthetic and generated for retrieval/benchmark testing. No real person, business, or policy is described.
+SYNTHETIC — Meridian Mutual (fictional) · not a real insurance document Page 1 of 1

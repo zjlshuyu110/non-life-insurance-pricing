@@ -2,6 +2,10 @@
 
 这个项目回答：给定驾驶人和车辆特征，每单位保险暴露的预期赔款是多少？
 
+新增 [AI 文本抽取 → GLM 演示](https://zjlshuyu110.github.io/non-life-insurance-pricing/text-to-pricing.html)：本机 MiniLM 抽取投保文本，保留原文位置，校验字段后调用已有 GLM。12 个合成投保场景中，6 个完成计算、4 个送复核、2 个在入口阻断；另有两份公开合成合同展示实际抽取失败。网页浏览预录结果，新文本可通过命令行本机推理。
+
+**这个扩展证明流程可以运行，不证明真实定价能力提升。** 年里程和用途虽然被抽取，但当前 GLM 未使用，不能把价格变化归因于这些变量。公开数据筛选、当前边界和面试展示顺序见 [数据调研与集成说明](TEXT_DATASETS.md)，实测见 [运行报告](../reports/text_pricing/report.md)。
+
 建议先打开 [高级交互工作台](https://zjlshuyu110.github.io/non-life-insurance-pricing/)，再读 `reports/report.md` 的实际结果，最后用 notebook 和源码理解计算过程。原版分析报告仍保留在 `reports/dashboard.html`。
 
 新版工作台可以旋转三维模型曲面、调整年龄和 bonus–malus、联动筛选真实测试集、点击地区热力图，并对比不同赔款封顶情景。三维图是固定其他特征后的模型预测；测试集图表是真实保单汇总，页面中分别标注。直接打开 `docs/index.html` 也可离线使用。

@@ -1,0 +1,6 @@
+# Optional local neural text extraction; CPU torch comes from requirements-neural.txt.
+transformers==4.57.6
+huggingface-hub==0.36.2
+tokenizers==0.22.2
+safetensors==0.8.0
+pypdf==6.1.3

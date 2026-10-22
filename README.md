@@ -8,6 +8,28 @@
 
 [中文说明](docs/GUIDE_ZH.md) · [Methodology](docs/METHODOLOGY.md) · [Data card](data/README.md) · [Run results](reports/report.md)
 
+## AI text extraction → existing GLM
+
+[**Open the Text → Pricing AI Lab →**](https://zjlshuyu110.github.io/non-life-insurance-pricing/text-to-pricing.html)
+
+A local pretrained MiniLM question-answering model extracts driver age, vehicle age, bonus–malus and fuel from **authored synthetic applications**, retaining exact source spans. Schema checks and document/time gates precede handoff to the existing GLMs. Mileage and vehicle use are shown as research-only fields; they do not change the fitted model's price.
+
+The recorded demonstration has 12 scenarios: 6 priced, 4 sent for review, and 2 blocked before extraction. Two **public synthetic policy PDFs** from Strata are also processed separately: the raw reader exactly matches 3 of 6 answers, with failures retained. A high-scoring wrong usage answer is preserved and rejected by the schema. The static page browses actual local runs; use the CLI for new text.
+
+**This demonstrates integration, not improved claims prediction.** No real pre-quote text linked to subsequent claims/exposure was confirmed among the reviewed public candidates. The authored examples are development fixtures, not an independent NLP test set. Existing GLM/MLP results are unchanged. See the [dataset assessment](docs/TEXT_DATASETS.md), [measured report](reports/text_pricing/report.md), and [source manifest](data/text_demo/manifest.json).
+
+After fitting the base GLMs:
+
+```bash
+python -m pip install -r requirements-neural.txt
+python -m pip install -r requirements-text.txt
+python scripts/prepare_text_demo.py --download-model
+python -m nonlife.text_pricing
+python scripts/build_text_showcase.py
+```
+
+For a new English application, run `python -m nonlife.text_pricing --input data/text_demo/example_input.json --output result.json`. Uses an explicitly disclosed fixed profile for five non-text fields. The pinned model download is about 133 MB; inference is local and needs no API key. Public PDFs and their extracted text retain CC BY 4.0 licensing; see [third-party notices](THIRD_PARTY_NOTICES.md).
+
 ## GLM versus an ordinary neural network
 
 [**Open the measured GLM vs MLP comparison →**](https://zjlshuyu110.github.io/non-life-insurance-pricing/model-comparison.html)

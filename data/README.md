@@ -25,4 +25,4 @@
 
 Raw `.rda` and `.csv.gz` files are downloaded locally, not committed. The source CASdatasets package is distributed under GPL (>= 2); original data terms and attribution remain separate from this project's code license. Consult the upstream package documentation when redistributing source data. Outputs committed here are aggregated analyses, not the source tables.
 
-No synthetic replacement is used for the reported results. The tiny constructed data in unit tests are clearly test fixtures only.
+No synthetic replacement is used for the real-policy GLM/MLP pricing results. Unit-test fixtures and the separate `text_demo/` workflow demonstration are explicitly synthetic. The latter contains authored application scenarios and two openly licensed public synthetic PDFs; none is used to fit or evaluate the claims-pricing models. See [text-source assessment](../docs/TEXT_DATASETS.md) and [text-demo data card](text_demo/README.md).

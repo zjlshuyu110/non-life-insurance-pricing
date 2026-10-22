@@ -1,0 +1,24 @@
+SYNTHETIC — MERIDIAN MUTUAL (FICTIONAL)
+Meridian Mutual Insurance SE
+Motor Policy — Declarations
+Policy Declarations
+Policy number MOT-0000004
+Line of business Motor
+Named insured Mr. Stewart Montague
+Mailing address 65 Fenning Street, K154PC8 Dermot Ville, Ireland
+Policy period 04/12/2024 to 04/12/2025
+Insured vehicle Opel Astra (2008, red) — reg XD-9797-YI
+Producing agent Mr. Alister Kinnear — Hyman Insurance Group
+Annual premium €960.00
+Deductible €500.00
+Limits of Insurance
+Coverage Limit
+Bodily injury — per person €100,000.00
+Bodily injury — per accident €300,000.00
+Property damage €100,000.00
+Endorsements
+GAP, NEW_CAR_REPL, UM_UIM
+The full policy contract, endorsement schedule, and coverage schedule are issued as separate forms
+under policy MOT-0000004.
+This document is synthetic and generated for retrieval/benchmark testing. No real person, business, or policy is described.
+SYNTHETIC — Meridian Mutual (fictional) · not a real insurance document Page 1 of 1

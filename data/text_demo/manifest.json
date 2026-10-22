@@ -1,0 +1,93 @@
+{
+  "verified_on": "2026-10-22",
+  "public_corpus": "https://github.com/NikolaiSachok/strata-insurance-corpus",
+  "corpus_revision": "c9ad2b0b4cdc4041bda304390988ee8ce8386091",
+  "license_url": "https://creativecommons.org/licenses/by/4.0/",
+  "synthetic": true,
+  "adaptations": "Two original PDFs unchanged; text extracted with pypdf 6.1.3. Added field questions. No pricing join to freMTPL2.",
+  "model_files": [
+    {
+      "file": "config.json",
+      "bytes": 477,
+      "sha256": "688d980e03e028843d378fb3bf9919dc4b677b24e2a6ef37c97815d5c056151b"
+    },
+    {
+      "file": "model.safetensors",
+      "bytes": 133466376,
+      "sha256": "240478c7251d5e55be35feb47177054b960259b9328af662ea3cee87ce9755a6"
+    },
+    {
+      "file": "special_tokens_map.json",
+      "bytes": 112,
+      "sha256": "303df45a03609e4ead04bc3dc1536d0ab19b5358db685b6f3da123d05ec200e3"
+    },
+    {
+      "file": "tokenizer_config.json",
+      "bytes": 107,
+      "sha256": "c95bd2738add69376f7b8dea64d917128f949f174daa48910c5d8bf87bad36e2"
+    },
+    {
+      "file": "vocab.txt",
+      "bytes": 231508,
+      "sha256": "07eced375cec144d27c900241f3e339478dec958f92fddbc551f295c992038a3"
+    }
+  ],
+  "public_documents": [
+    {
+      "id": "MOT-0000002",
+      "title": "MOT-0000002 / Strata public synthetic contract",
+      "license": "CC-BY-4.0",
+      "author": "Nikolai Sachok",
+      "source_url": "https://github.com/NikolaiSachok/strata-insurance-corpus/blob/c9ad2b0b4cdc4041bda304390988ee8ce8386091/sample/docs/policy/MOT-0000002-declarations.pdf",
+      "pdf_path": "data/text_demo/public/MOT-0000002.pdf",
+      "text_path": "data/text_demo/public/MOT-0000002.txt",
+      "pdf_sha256": "4e6097ea0ac76c48622edb5e7ed903dc4decb5e373bec2bacc96188b8e2ef2c1",
+      "text_sha256": "5effdd414bd87c81a31cf5b42bf8a96a2cd98304ab8b3d51cca3ef8e268aaefe",
+      "questions": [
+        {
+          "field": "vehicle",
+          "question": "What is the make and model of the insured vehicle?",
+          "expected": "Peugeot 208"
+        },
+        {
+          "field": "effective_date",
+          "question": "When does the policy period start?",
+          "expected": "26/11/2023"
+        },
+        {
+          "field": "expiry_date",
+          "question": "When does the policy period end?",
+          "expected": "25/11/2024"
+        }
+      ]
+    },
+    {
+      "id": "MOT-0000004",
+      "title": "MOT-0000004 / Strata public synthetic contract",
+      "license": "CC-BY-4.0",
+      "author": "Nikolai Sachok",
+      "source_url": "https://github.com/NikolaiSachok/strata-insurance-corpus/blob/c9ad2b0b4cdc4041bda304390988ee8ce8386091/sample/docs/policy/MOT-0000004-declarations.pdf",
+      "pdf_path": "data/text_demo/public/MOT-0000004.pdf",
+      "text_path": "data/text_demo/public/MOT-0000004.txt",
+      "pdf_sha256": "378d93583ef9a8490ccda56e1e80eb302ee7c16b72422bb7d720f498f45aa86c",
+      "text_sha256": "f45eee2671bc8d2d4bd177540f7dbfc47291db96bf89d767556ab39b8204025b",
+      "questions": [
+        {
+          "field": "vehicle",
+          "question": "What is the make and model of the insured vehicle?",
+          "expected": "Opel Astra"
+        },
+        {
+          "field": "effective_date",
+          "question": "When does the policy period start?",
+          "expected": "04/12/2024"
+        },
+        {
+          "field": "expiry_date",
+          "question": "When does the policy period end?",
+          "expected": "04/12/2025"
+        }
+      ]
+    }
+  ]
+}

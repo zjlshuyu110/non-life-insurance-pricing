@@ -1,0 +1,42 @@
+<!doctype html>
+<html lang="en">
+<head>
+<meta charset="utf-8"><meta name="viewport" content="width=device-width, initial-scale=1">
+<meta name="description" content="Reproducible local AI extraction with source evidence, validation and existing actuarial GLMs.">
+<title>Text → Pricing / Non-life AI Lab</title>
+<link rel="icon" href="data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 64 64'%3E%3Crect width='64' height='64' rx='14' fill='%230b1923'/%3E%3Cpath d='M16 48V16L48 48V16' fill='none' stroke='%2345d6c0' stroke-width='5'/%3E%3C/svg%3E">
+<link rel="stylesheet" href="assets/text-pricing.css">
+<script defer src="assets/text-pricing-data.js"></script><script defer src="assets/text-pricing.js"></script>
+</head>
+<body>
+<a class="skip" href="#workbench">Skip to demonstration</a>
+<header><a class="brand" href="index.html">N<span>∕</span> <b>NON-LIFE<small>RISK OBSERVATORY</small></b></a><nav><a href="index.html">Pricing lab ↗</a><a href="model-comparison.html">GLM vs MLP ↗</a><a href="https://github.com/zjlshuyu110/non-life-insurance-pricing">Source ↗</a></nav></header>
+<main>
+<section class="hero"><div><p class="eyebrow">RESEARCH SERIES 003 / AI IN THE WORKFLOW</p><h1>Read the risk.<br><em>Keep the evidence.</em></h1><p class="lead">AI reads the application. Validation checks the fields.<br>The existing GLM calculates the modelled pure premium.</p><p class="zh" lang="zh">让 AI 读懂投保文本，让 GLM 保留定价依据。</p></div><aside class="hero-note"><span class="live-dot"></span> REAL LOCAL MODEL RUN<p>MiniLM · extractive question answering</p><div class="mini-flow"><span>TEXT</span><i>→</i><span>FIELDS</span><i>→</i><span>GLM</span></div><small>Synthetic workflow demo · no claim of pricing uplift.<br>预录本机推理结果；页面不在浏览器内运行 AI。</small></aside></section>
+<section class="stats" aria-label="Recorded demonstration results"><div><b id="stat-priced">—</b><span>priced / 12 applications</span></div><div><b id="stat-review">—</b><span>held for review</span></div><div><b id="stat-blocked">—</b><span>blocked before extraction</span></div><div><b id="stat-public">—</b><span>public PDF exact matches</span></div></section>
+<section id="workbench" class="workbench">
+<div class="section-top"><div><p class="eyebrow">01 / TRACE EVERY STEP</p><h2>From words to a model input</h2></div><div class="case-picker"><label for="case-select">Choose a recorded case / 选择案例</label><select id="case-select"></select></div></div>
+<div class="toolbar"><p id="case-origin"></p><button id="mileage-pair" type="button">Compare 8,000 → 40,000 km ↗</button></div>
+<div class="pipeline">
+<article class="panel document"><div class="panel-title"><span>01</span><h3>Source document</h3><b class="pill" id="doc-badge"></b></div><div class="doc-meta" id="doc-meta"></div><div id="document-text" class="paper" tabindex="0"></div><p class="help">Select a field to highlight its exact source span.<br>点击右侧字段，查看模型引用的原文。</p><a id="public-source" hidden target="_blank" rel="noopener">Original public PDF ↗</a></article>
+<article class="panel extraction"><div class="panel-title"><span>02</span><h3>AI + validation</h3></div><p class="caption" id="extraction-caption">Neural answer → schema check → typed value</p><div id="fields" class="fields"></div><p class="help">Scores rank candidate spans. They are not calibrated probabilities of correctness. “Accepted” means passed these checks, not independently verified.</p></article>
+<article class="panel pricing"><div class="panel-title"><span>03</span><h3>GLM handoff</h3></div><div id="pricing-output" aria-live="polite"></div><details id="pricing-profile"><summary>Other supplied model inputs</summary><p>Illustrative structured profile, not extracted from the text:</p><pre id="fixed-profile"></pre></details><p class="help">Annual pure premium = expected claim cost per year. No expenses, profit, taxes or inflation loading. Historical model demonstration; not an insurance quote.</p></article>
+</div>
+<div class="insight" id="case-insight" aria-live="polite"></div>
+<details class="json-details"><summary>Inspect recorded extraction JSON</summary><pre id="raw-json"></pre><button type="button" id="download-json">Download this recorded case ↓</button></details>
+</section>
+<section class="section"><div class="section-top"><div><p class="eyebrow">02 / WHAT THE NUMBERS MEAN</p><h2>Evaluate the extraction, too.</h2></div><span class="label">SMALL DEVELOPMENT DEMO</span></div><div class="evaluation"><article><h3>Typed application fields</h3><strong id="field-score">—</strong><p id="field-detail"></p><p>Nine short authored applications are scored; three gate cases are assessed separately. Development examples inspected during implementation, not an independent NLP test set.</p></article><article><h3>A preserved model mistake</h3><blockquote>“What is the car used for?”<br><b>Model answer: “diesel”</b></blockquote><p>In the missing-usage example, the raw answer scores about 0.72. The allowed-value check rejects it. The original answer remains visible in the trace.</p></article><article><h3>Two public synthetic PDFs</h3><strong id="public-score">—</strong><p>The raw reader sometimes returns a date range instead of a start date, and misses a vehicle. Failures are retained. These documents are extraction-only; they are not joined to the French pricing data.</p></article></div></section>
+<section class="section"><div class="section-top"><div><p class="eyebrow">03 / THE PUBLIC DATA LANDSCAPE</p><h2>Useful sources. Different jobs.</h2></div><a href="https://github.com/zjlshuyu110/non-life-insurance-pricing/blob/main/docs/TEXT_DATASETS.md">Full dataset assessment ↗</a></div><div class="sources">
+<article><span class="label teal">USED IN THIS DEMO</span><h3>Strata Insurance Corpus</h3><p>Open synthetic P&amp;C documents with structured ground truth. Two unchanged motor declaration PDFs are bundled under CC BY 4.0.</p><a href="https://github.com/NikolaiSachok/strata-insurance-corpus">Corpus &amp; data card ↗</a></article>
+<article><span class="label">EXTRACTION EXTENSION</span><h3>RISCBAC</h3><p>10,000 aligned synthetic motor contracts in English and French. Suitable for bilingual extraction; no real future loss labels.</p><a href="https://huggingface.co/datasets/davebulaval/RISCBAC">Dataset · CC BY 4.0 ↗</a></article>
+<article><span class="label">UNDERWRITING KNOWLEDGE</span><h3>QuoteSweep</h3><p>Published appetite information from 509 commercial P&amp;C carriers. Useful for rule retrieval, not policy-level pure-premium training.</p><a href="https://www.quotesweep.com/research/observed-appetite">Research &amp; open corpus ↗</a></article>
+</div><p class="boundary" lang="zh">目前核实的候选中，尚未找到同时开放“投保前原始文本 + 可关联的后续赔款 + 暴露期”的真实数据。这里证明流程能运行，不证明加入文本后定价更准。</p></section>
+<section class="section next"><div><p class="eyebrow">04 / MAKE IT REPRODUCIBLE</p><h2>Bring the workflow<br>to your next interview.</h2><p lang="zh">“这次结构化数据上的 GLM 表现更好，所以我把 AI 接在信息提取环节：保留原文、校验字段，再交给 GLM。下一步需要关联投保文本与后续赔款，用时间外样本检验新增特征是否改善定价。”</p></div><div class="commands"><span class="label">RUN FROM THE PROJECT FOLDER</span><pre>python -m pip install -r requirements-neural.txt
+python -m pip install -r requirements-text.txt
+python scripts/prepare_text_demo.py --download-model
+python -m nonlife.text_pricing
+python scripts/build_text_showcase.py</pre><p>Fit base GLMs first with <code>python -m nonlife.run</code>. For new English text, use <code>--input data/text_demo/example_input.json --output result.json</code>. Inference is local; the model download is about 133 MB.</p></div></section>
+</main>
+<footer><p>NON-LIFE / REPRODUCIBLE RESEARCH</p><p>Public PDFs: Nikolai Sachok, CC BY 4.0 · Extractor: deepset, CC BY 4.0 · <a href="https://github.com/zjlshuyu110/non-life-insurance-pricing/blob/main/THIRD_PARTY_NOTICES.md">Attribution &amp; limitations</a></p></footer>
+</body>
+</html>

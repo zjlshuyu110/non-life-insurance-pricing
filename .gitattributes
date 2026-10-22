@@ -1,0 +1,6 @@
+# Hashed text-demo inputs must be byte-identical across Windows and Linux.
+data/text_demo/*.json text eol=lf
+data/text_demo/public/*.txt text eol=lf
+data/text_demo/public/*.pdf binary
+nonlife/text_pricing.py text eol=lf
+text_config.json text eol=lf

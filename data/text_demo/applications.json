@@ -1,0 +1,230 @@
+[
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": true,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "commuter",
+    "title": "01 / Everyday commuter",
+    "text": "I am the main driver and I am 42 years old. My car is 5 years old and runs on diesel. My bonus-malus coefficient is 50. I expect to drive 8,000 kilometres per year. I use this car for commuting.",
+    "gold": {
+      "DrivAge": 42,
+      "VehAge": 5,
+      "BonusMalus": 50,
+      "VehGas": "Diesel",
+      "AnnualKm": 8000,
+      "Usage": "commuting"
+    }
+  },
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": true,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "delivery",
+    "title": "02 / Delivery use",
+    "text": "The main driver is 29 years old. The car is 3 years old. The fuel is petrol. The bonus-malus coefficient is 80. The expected annual mileage is 40,000 kilometres. The car is used for food delivery.",
+    "gold": {
+      "DrivAge": 29,
+      "VehAge": 3,
+      "BonusMalus": 80,
+      "VehGas": "Regular",
+      "AnnualKm": 40000,
+      "Usage": "food delivery"
+    }
+  },
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": true,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "retired",
+    "title": "03 / Retired driver",
+    "text": "I am 68 years old and I am the main driver. My car is 12 years old. It uses diesel. My bonus-malus coefficient is 50. I expect to drive 5,000 kilometres per year. I use the car for shopping.",
+    "gold": {
+      "DrivAge": 68,
+      "VehAge": 12,
+      "BonusMalus": 50,
+      "VehGas": "Diesel",
+      "AnnualKm": 5000,
+      "Usage": "shopping"
+    }
+  },
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": true,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "young",
+    "title": "04 / Young driver",
+    "text": "The main driver is 22 years old. The car is 2 years old and uses petrol. The bonus-malus coefficient is 100. Annual mileage is expected to be 12,000 kilometres. The car is used for commuting.",
+    "gold": {
+      "DrivAge": 22,
+      "VehAge": 2,
+      "BonusMalus": 100,
+      "VehGas": "Regular",
+      "AnnualKm": 12000,
+      "Usage": "commuting"
+    }
+  },
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": true,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "missing_bonus",
+    "title": "05 / Missing bonus-malus",
+    "text": "I am the main driver and I am 42 years old. My car is 5 years old and runs on diesel. I expect to drive 8,000 kilometres per year. I use this car for commuting. I have not supplied my bonus-malus coefficient.",
+    "gold": {
+      "DrivAge": 42,
+      "VehAge": 5,
+      "BonusMalus": null,
+      "VehGas": "Diesel",
+      "AnnualKm": 8000,
+      "Usage": "commuting"
+    }
+  },
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": true,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "missing_details",
+    "title": "06 / Incomplete application",
+    "text": "Please provide a quote for my car. I have not yet supplied the driver age, car age, fuel, bonus-malus coefficient, expected annual mileage or vehicle use.",
+    "gold": {
+      "DrivAge": null,
+      "VehAge": null,
+      "BonusMalus": null,
+      "VehGas": null,
+      "AnnualKm": null,
+      "Usage": null
+    }
+  },
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": true,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "high_mileage",
+    "title": "07 / Same risk inputs, more mileage",
+    "text": "I am the main driver and I am 42 years old. My car is 5 years old and runs on diesel. My bonus-malus coefficient is 50. I expect to drive 40,000 kilometres per year. I use this car for commuting.",
+    "gold": {
+      "DrivAge": 42,
+      "VehAge": 5,
+      "BonusMalus": 50,
+      "VehGas": "Diesel",
+      "AnnualKm": 40000,
+      "Usage": "commuting"
+    }
+  },
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": true,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "missing_extra",
+    "title": "08 / No mileage or usage",
+    "text": "I am the main driver and I am 42 years old. My car is 5 years old and runs on diesel. My bonus-malus coefficient is 50.",
+    "gold": {
+      "DrivAge": 42,
+      "VehAge": 5,
+      "BonusMalus": 50,
+      "VehGas": "Diesel",
+      "AnnualKm": null,
+      "Usage": null
+    }
+  },
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": true,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "electric",
+    "title": "09 / Unsupported fuel",
+    "text": "I am the main driver and I am 42 years old. My car is 5 years old and runs on electricity. My bonus-malus coefficient is 50. I expect to drive 8,000 kilometres per year. I use this car for commuting.",
+    "gold": {
+      "DrivAge": 42,
+      "VehAge": 5,
+      "BonusMalus": 50,
+      "VehGas": null,
+      "AnnualKm": 8000,
+      "Usage": "commuting"
+    }
+  },
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": false,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "conflict",
+    "title": "10 / Conflicting ages",
+    "text": "The main driver is 42 years old. The main driver is 24 years old. The car is 5 years old and uses diesel. The bonus-malus coefficient is 50.",
+    "gold": {
+      "DrivAge": null,
+      "VehAge": 5,
+      "BonusMalus": 50,
+      "VehGas": "Diesel",
+      "AnnualKm": null,
+      "Usage": null
+    }
+  },
+  {
+    "document_type": "claim_report",
+    "language": "en",
+    "available_at": "2026-01-02T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": false,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "claim",
+    "title": "11 / Post-loss report",
+    "text": "The main driver is 42 years old. The car is 5 years old and uses diesel. The bonus-malus coefficient is 50. This accident caused a claim of EUR 12,000.",
+    "gold": {
+      "DrivAge": 42,
+      "VehAge": 5,
+      "BonusMalus": 50,
+      "VehGas": "Diesel",
+      "AnnualKm": null,
+      "Usage": null
+    }
+  },
+  {
+    "document_type": "application",
+    "language": "en",
+    "available_at": "2026-02-01T09:00:00+00:00",
+    "quote_at": "2026-01-03T09:00:00+00:00",
+    "evaluate_fields": false,
+    "source": "Project-authored synthetic application; not a freMTPL2 policy.",
+    "id": "late",
+    "title": "12 / Arrived after the quote",
+    "text": "I am the main driver and I am 42 years old. My car is 5 years old and runs on diesel. My bonus-malus coefficient is 50. I expect to drive 8,000 kilometres per year. I use this car for commuting.",
+    "gold": {
+      "DrivAge": 42,
+      "VehAge": 5,
+      "BonusMalus": 50,
+      "VehGas": "Diesel",
+      "AnnualKm": 8000,
+      "Usage": "commuting"
+    }
+  }
+]

@@ -1,0 +1,10 @@
+{
+  "model_id": "deepset/minilm-uncased-squad2",
+  "revision": "934656cdda79824eabf503ed56e15c01ddbdbe3f",
+  "model_license": "CC-BY-4.0",
+  "score_threshold": 0.25,
+  "threads": 4,
+  "max_chars": 6000,
+  "reference_profile": {"VehBrand": "B12", "VehPower": 6, "Region": "R24", "Area": "D", "Density": 1000},
+  "note": "Illustrative fixed profile, not an individual from freMTPL2. Threshold is an engineering default, not calibrated confidence."
+}
